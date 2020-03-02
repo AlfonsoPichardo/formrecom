@@ -30,36 +30,128 @@
       }
     </style>
   </head>
+      <h1> HOLA POR FAVOR INDICA EL ESTADO DE LA REPUBLICA EN DÓNDE TE ENCUENTRAS Y TU PRESUPUESTO</h1>
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
+          <label>ESTADOS:</label>
+          <br><br>
+          <select id="estados" type="number">
+            <option value="MEXICO">MÉXICO</option>
+            <option value="PUEBLA">PUEBLA</option>
+            <option value="VERACRUZ">VERACRUZ</option>
+            <option value="PACHUCA">PACHUCA</option>
+            <option value="TOLUCA">TOLUCA</option>
+          </select>
+          <br><br>
+          <label>PRECIOS:</label>
+          <br><br>
+          <select id="precios" display="none">
+            <option value="50">$50</option>
+            <option value="100">$100</option>
+            <option value="150">$150</option>
+            <option value="200">$200</option>
+          </select>
+          <br><br>
+          <button onclick="precios()"> ACEPTAR </button>
+            <script>
+            function precios(){
+                var estados = document.getElementById("estados").value;
+                var precios = document.getElementById("precios").value;
+              switch(estados){
+                case "MEXICO":
+                switch(precios){
+                  case "50":
+                  alert("LE RECOMIENDO UNOS TACOS DE GUISADO");
+                  break;
+                  case "100":
+                  alert("UNA COMIDA CORRIDA EN FONDAS");
+                  break;
+                  case "150":
+                  alert("UN PAQUETE DE COMIDA RAPIDA");
+                  break;
+                  case "200":
+                  alert("UN ALMUERZO EN UN RESTAURANTE");
+                  break;
+                }
+                break;
+                case "PUEBLA":
+                switch(precios){
+                  case "50":
+                  alert("TAQUITOS DE CHORIZO");
+                  break;
+                  case "100":
+                  alert("CEMITAS");
+                  break;
+                  case "150":
+                  alert("PLATO DE MOLE CON POLLO");
+                  break;
+                  case "200":
+                  alert("CHILE EN NOGADA");
+                  break;
+                }
+                break;
+                case "VERACRUZ":
+                switch(precios){
+                  case "50":
+                  alert("UN FILETE DE PESCADO");
+                  break;
+                  case "100":
+                  alert("OSTIONES A LA DIABLA");
+                  break;
+                  case "150":
+                  alert("PAELLA");
+                  break;
+                  case "200":
+                  alert("PESCADO A LA VERACRUZANA");
+                  break;
+                }
+                break;
+                case "PACHUCA":
+                switch(precios){
+                  case "50":
+                  alert("LE RECOMIENDO UNOS PASTES");
+                  break;
+                  case "100":
+                  alert("LE RECOMIENDO UNOS MIXIOTES");
+                  break;
+                  case "150":
+                  alert("LE RECOMIENDO UNA BARBACOA");
+                  break;
+                  case "200":
+                  alert("LE RECOMIENDO UN XIMBO");
+                  break;
+                }
+                break;
+                case "TOLUCA":
+                switch(precios){
+                  case "50":
+                  alert("LE RECOMIENDO UNOS TAQUITOS DE CHORIZO ");
+                  break;
+                  case "100":
+                  alert("LE RECOMIENDO UNOS TACOS DE CARNITAS");
+                  break;
+                  case "150":
+                  alert("LE RECOMIENDO UNA PANCITA");
+                  break;
+                  case "200":
+                  alert("UN PLATO DE QUESOS FUNDIDOS CON CHORIZO");
+                  break;
+                }
+                break;
+                default:
+                alert("Seleccione otra opción");
+              }
+            }
+            </script>
   </body>
+  <footer>
+    <br>
+    <br>
+    
+    <br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    
+      <address>Estado de Mexico</address>
+      <small>&copy; Derechos Reservados 2020  Pichardo Vilchis Alfonso </small>
+    
+</footer>
 </html>
