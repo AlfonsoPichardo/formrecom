@@ -132,22 +132,20 @@
             }
             </script>
       </section>
-      
     </div>
+	<script>
+      customElements.define("foooter-web", class extends HTMLElement {
+        connectedCallback() {
+          
+          this.innerHTML = "Copyright &copy; 2020 Pichardo Vilchis Alfonso";
+        }
+        
+      });
+    </script>
+	
   </main>
   <center>
-  <footer id="pielogo">
-  
-    <div>
-      <section class="seccionpie">
-              
-      </section>
-      <section class="seccionpie">
-        <address>Pichardo Vilchis Alfonso, UTN</address>
-        <small>&copy; Derechos Reservados 2020</small>
-      </section>
-    </div>
-  </footer>
+   <foooter-web id="fantasma"></foooter-web>
   </center>
   </body>
   </html>

@@ -141,6 +141,11 @@ figure img {
 	background-color: #56728151;
 	border-radius: 10px;
 }
+#foooter-web {
+        position: absolute;
+        font-size: 25px;
+      }
+	  
 .seccionpie {
 	flex: 1;
 	padding: 20px;
