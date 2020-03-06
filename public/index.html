@@ -30,9 +30,18 @@
       }
     </style>
   </head>
-      <h1> HOLA POR FAVOR INDICA EL ESTADO DE LA REPUBLICA EN DÓNDE TE ENCUENTRAS Y TU PRESUPUESTO</h1>
   <body>
-          <label>ESTADOS:</label>
+    <header id="cabeceralogo">
+      <div>
+        <center><h1>RECOMENDACIONES</h1></center>
+      </div>
+    </header>
+  <main>
+    <div>
+      
+      <section id="articulosprincipales">
+      <h1> HOLA POR FAVOR INDICA EL ESTADO DE LA REPUBLICA EN DÓNDE TE ENCUENTRAS Y TU PRESUPUESTO </h1>
+            <label>ESTADOS:</label>
           <br><br>
           <select id="estados" type="number">
             <option value="MEXICO">MÉXICO</option>
@@ -54,8 +63,8 @@
           <button onclick="precios()"> ACEPTAR </button>
             <script>
             function precios(){
-                var estados = document.getElementById("estados").value;
-                var precios = document.getElementById("precios").value;
+              var estados = document.getElementById("estados").value;
+              var precios = document.getElementById("precios").value;
               switch(estados){
                 case "MEXICO":
                 switch(precios){
@@ -142,16 +151,24 @@
               }
             }
             </script>
+      </section>
+      
+    </div>
+  </main>
+  <center>
+  <footer id="pielogo">
+  
+    <div>
+      <section class="seccionpie">
+              
+      </section>
+      <section class="seccionpie">
+        <address>Pichardo Vilchis Alfonso, UTN</address>
+        <small>&copy; Derechos Reservados 2020</small>
+      </section>
+    </div>
+  </footer>
+  </center>
   </body>
-  <footer>
-    <br>
-    <br>
-    
-    <br><br>
-    <br><br><br><br><br><br><br><br><br><br><br>
-    
-      <address>Estado de Mexico</address>
-      <small>&copy; Derechos Reservados 2020  Pichardo Vilchis Alfonso </small>
-    
-</footer>
-</html>
+  </html>
+  
